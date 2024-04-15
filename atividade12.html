@@ -2,16 +2,19 @@
     <head>
         <meta charset="UTF-8">
         <title>calculadora</title>
+        <link rel="stylesheet" href="atividade12.css">
     </head>
 
     <script src="atividade12.js"></script>
 
     <container>
+        <div class="column">
         <form method="post" action="#">
             <h1>Calculadora</h1>
             <div>
-                <select id="opcao" value="          ">
-                    <optgroup label="escolha uma operação">
+                <select id="opcao" value="">
+                    <optgroup>
+                        <option value="adicao" disabled selected hidden>Escolha uma operação (padrão adição)</option>
                         <option value="adicao">Adição</option>
                         <option value="subtracao">Subtração</option>
                         <option value="multiplicacao">Multiplicação</option>
@@ -19,20 +22,21 @@
                     </optgroup>
                 </select>
             </div>
-            <div>
+            <div class="textLeft">
                 <h2>Pimeiro Número</h2>
                 <input type="number" id="num1" name="num1" required></input>
             </div>
-            <div>
+            <div class="textLeft">
                 <h2>Segundo Número</h2>
                 <input type="number" id="num2" name="num2" required></input>
             </div>
             <div>
                 <button id="calcular" type="button" onclick="calculando()">Calcular</button>
             </div>
-            <div>
-                <h2>O Resultado foi: </h2><h2 id="resultado"></h2>
+            <div class="row">
+                <h2>O Resultado foi:   </h2><h2 id="resultado"></h2>
             </div>
         </form><br>
+        </div>
     </container>
 </html>
