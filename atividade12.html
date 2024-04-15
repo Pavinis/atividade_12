@@ -11,7 +11,7 @@
         <div class="column">
         <form method="post" action="#">
             <h1>Calculadora</h1>
-            <div>
+            <div class="textLeft" onclick="tiraNum2()">
                 <select id="opcao" value="">
                     <optgroup>
                         <option value="adicao" disabled selected hidden>Escolha uma operação (padrão adição)</option>
@@ -19,6 +19,11 @@
                         <option value="subtracao">Subtração</option>
                         <option value="multiplicacao">Multiplicação</option>
                         <option value="divisao">Divisão</option>
+                        <option value="mod">Divisão Modular</option>
+                        <option value="potencia">Potência</option>
+                        <option value="log">Logaritmo (de base 10)</option>
+                        <option value="sqrt">Raiz Quadrada</option>
+                        <option value="porcentagem">Porcentagem</option>
                     </optgroup>
                 </select>
             </div>
@@ -30,7 +35,7 @@
                 <h2>Segundo Número</h2>
                 <input type="number" id="num2" name="num2" required></input>
             </div>
-            <div>
+            <div class="textLeft">
                 <button id="calcular" type="button" onclick="calculando()">Calcular</button>
             </div>
             <div class="row">
