@@ -62,3 +62,37 @@ function tiraNum2() {
             document.getElementById('num2').placeholder = ("");
     }
 }
+
+var tema = 0;
+var cor = "rgb()"
+
+function mudarTema() {
+    if (tema === 0) {
+        tema = 1;
+        corset(0,0,0);
+        document.getElementById("body").style.backgroundColor = cor;
+        corset(139,139,139);
+        document.getElementById("form").style.backgroundColor = cor;
+        corset(255,255,255);
+        document.getElementById("mudarTema").style.borderRightColor = cor;
+        document.getElementById("mudarTema").style.borderBottomColor = cor;
+        corset(0,0,139);
+        document.getElementById("calcular").style.color = cor;
+    } else {
+        tema = 0;
+        corset(212,212,212);
+        document.getElementById("body").style.backgroundColor = cor;
+        corset(255,255,255);
+        document.getElementById("form").style.backgroundColor = cor;
+        corset(0,0,0);
+        document.getElementById("mudarTema").style.borderRightColor = cor;
+        document.getElementById("mudarTema").style.borderBottomColor = cor;
+        corset(0,0,139);
+        document.getElementById("calcular").style.color = cor;
+    }
+    console.log(tema);
+}
+
+function corset(r,g,b) {
+    cor = ("rgb(" + r + ", " + g + ", " + b + ")")
+}
